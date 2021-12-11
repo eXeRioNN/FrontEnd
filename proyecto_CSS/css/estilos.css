@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Trade+Winds&display=swap');
+h1, h2{
+  font-family: 'Lobster', cursive;
+}
+h2{
+  font-size: 40px;
+}
+p{
+  font-family: 'Trade Winds', cursive;
+}
+
+#barra{
+  background: -webkit-linear-gradient(left, #4F33FF,#2F7ABD);
+  background: -o-linear-gradient(left, #4F33FF, #2F7ABD);
+	background: -moz-linear-gradient(left, #4F33FF, #2F7ABD);
+  background: linear-gradient(to left, #4F33FF, #2F7ABD);
+  display:flex;
+  flex-flow:row wrap;
+  width: 100%;
+  position: fixed;
+  top:0;
+  z-index: 3;
+}
+#barra .titulo{
+  float: left;
+  font-size: 9px;
+  margin-top: -14px;
+  margin-right: 8px;
+}
+#barra .nav{
+  
+  float: inline-end;
+}
+
+
+.principal{
+  background-image: url(../images/inicial2.jpg);
+  display:flex;
+  align-items: center; 
+  justify-content:center;
+  flex-flow: row;
+  height: 400px;
+  margin-top: 30px;
+  width: 100%;
+}
+.principal .contenido{
+  background-color: darkseagreen;
+  width: 33.3%;
+  border-radius: 20px;
+  text-align: center;
+}
+
+
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: #D5DFB5;
+}
+body .contenido{
+  display:flex;
+  flex-flow:row wrap;
+  margin-bottom: 80px;
+  margin-top: 80px;
+}
+body .imagen-principal{
+  float: left;
+  width: 33.3%;
+}
+body .descripcion{
+  width: 33.3%;
+  text-align: center; 
+}
+body .imagen-secundaria{
+  width: 33.3%;
+  float: right;  
+}
+body img{
+  width:50%;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  border-radius: 30px;
+  -webkit-filter: saturate(30%);
+  filter: saturate(30%);
+}
+#parque .imagen-secundaria{
+  width: 33.3%;
+  float: right;
+  display:flex;
+  align-items: center; 
+  justify-content:center;
+  flex-flow: row;
+}
+
+
+footer{
+  background-color: white;
+  display:flex;
+  flex-flow:row wrap;
+}
+footer .informacion{
+  width: 50%;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+footer .contacto{
+  width: 300px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  background-color: blanchedalmond;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+
+
+#email{
+  border-radius: 5px;
+  border: 1px solid black;
+}
+#descripcion-form{
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+
+@media (min-width:801px){
+  body img:hover {
+  transition: transform 1s;
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -webkit-filter: saturate(100%);
+  filter: saturate(100%);
+  }
+}
+
+
+@media (min-width:600px) and (max-width:800px){
+  #barra .titulo{
+    width: 30%;
+    text-align: center;
+    display: block;
+    margin-left: 150px;
+    font-size: 9px;
+    margin-top: -14px;
+    
+  }
+
+
+  .principal{
+    height: 300px;
+  }
+  .principal .contenido{
+    width: 60%;
+  }
+
+
+  .imagen-secundaria{
+    display: none;
+  }
+  #parque .imagen-secundaria{
+    display: none;
+  }
+  body .imagen-principal{
+    width: 50%;
+    order: 2;
+  }
+  body .descripcion{
+    width: 50%;
+    order: 1;
+  }
+  body img{
+    -webkit-filter: saturate(100%);
+    filter: saturate(100%);
+  }
+
+
+  @keyframes img-animacion{
+    0%{
+      border: 1px solid white;
+    }
+    50%{
+      border:6px solid white
+    }  
+    100%{
+      border:1px solid black
+    }
+  }
+  img{
+    border:1px solid black;
+    animation: img-animacion 5s;
+    }
+}
+
+
+
+@media (max-width: 599px){
+  #barra .titulo{
+    width: 60%;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+  #barra .nav{
+    width: 60%;
+    text-align: center;
+    display: block;
+    margin: 0 auto;  
+  }
+
+
+  .principal .contenido{
+    width: 75%;
+  }
+  .imagen-secundaria{
+    display: none;
+  }
+  #parque .imagen-secundaria{
+    display: none;
+  }
+  body .imagen-principal{
+    width: 80%;
+    order: 2;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+  body .descripcion{
+    width: 100%;
+    order: 1;
+  }
+  body img{
+    -webkit-filter: saturate(100%);
+    filter: saturate(100%);
+  }
+
+
+  img{
+    animation-name: giro;
+    animation-duration: 2s;
+  }
+  @keyframes giro{
+      from {
+          transform:rotate(0deg);
+      }
+      to {
+          transform:rotate(360deg);
+      }
+  }
+}
+
